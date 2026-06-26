@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    match /bookings/{bookingId} {
+      // Signed-in users can read bookings (availability + my bookings).
+      allow read: if request.auth != null;
+
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.bookingStatus == 'Pending';
+
+      // Customers may only cancel their own booking (soft cancel).
+      allow update: if request.auth != null
+        && resource.data.userId == request.auth.uid
+        && request.resource.data.bookingStatus == 'Cancelled'
+        && resource.data.bookingStatus in ['Pending', 'Confirmed'];
+    }
+  }
+}

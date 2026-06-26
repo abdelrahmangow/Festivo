@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "140807091820",
+    "project_id": "fistivo-944fa",
+    "storage_bucket": "fistivo-944fa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140807091820:android:18a1c8ebc5880b44620a49",
+        "android_client_info": {
+          "package_name": "com.example.festivo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTcLKYr7rpohzS2HFTtHugl0dG0PhZoEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140807091820:android:3d2df19432365621620a49",
+        "android_client_info": {
+          "package_name": "com.example.festivo_back"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTcLKYr7rpohzS2HFTtHugl0dG0PhZoEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
